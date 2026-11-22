@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>vr test</title></head><body>
+<div id="app"></div><button id="vr">Enter VR</button>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "three";
+const r = new THREE.Scene();
+document.title = "module-ran-" + (THREE.REVISION || "x");
+const q = navigator.xr ? "xr-present" : "xr-absent";
+document.body.dataset.status = q;
+</script></body></html>
